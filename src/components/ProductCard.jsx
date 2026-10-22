@@ -12,12 +12,14 @@ function ProductCard({ product, onCartChange }) {
       <div className="product-card-content">
         <div className="product-card-heading">
           <span className="category-tag">{product.category}</span>
-          <span className="product-quantity">{product.quantity} in pantry</span>
+          <span className={`product-quantity${product.quantity < 5 ? ' low-stock' : ''}`}>
+            {product.quantity < 5 ? 'Low Stock: ' : ''}{product.quantity} in pantry
+          </span>
         </div>
         <h2><Link to={`/product/${product.id}`}>{product.name}</Link></h2>
         <div className="product-card-footer">
-          <span>${product.price.toFixed(2)} each</span>
-          <span>Cart subtotal <strong>${subtotal.toFixed(2)}</strong></span>
+          <span>₱{product.price.toFixed(2)} each</span>
+          <span>Cart subtotal <strong>₱{subtotal.toFixed(2)}</strong></span>
         </div>
         <div className="cart-controls">
           {cartQuantity === 0 ? (

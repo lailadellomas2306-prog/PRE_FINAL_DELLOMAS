@@ -52,7 +52,7 @@ function Home({ products, setProducts, onAddProduct }) {
       <AddProductForm onAdd={onAddProduct} />
       <aside className="cart-summary" aria-live="polite" aria-label="Cart summary">
         <span>{cartSummary.itemCount} {cartSummary.itemCount === 1 ? 'item' : 'items'} in cart</span>
-        <span>Cart total <strong>${cartSummary.total.toFixed(2)}</strong></span>
+        <span>Cart total <strong>₱{cartSummary.total.toFixed(2)}</strong></span>
       </aside>
     </main>
   )

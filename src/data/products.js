@@ -33,7 +33,7 @@ export const initialProducts = [
     description: 'A slow-fermented loaf with a crackly crust and a tender, tangy center.',
     specification: 'One 750 g loaf | Best enjoyed within three days',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1585478259715-876acc5be8eb?auto=format&fit=crop&w=900&q=85',
+    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=85',
   },
   {
     id: 'white-beans',

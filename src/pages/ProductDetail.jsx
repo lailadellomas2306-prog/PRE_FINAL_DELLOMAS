@@ -21,7 +21,7 @@ function ProductDetail({ products }) {
         <div className="product-detail-copy">
           <span className="category-tag">{product.category}</span>
           <h1>{product.name}</h1>
-          <p className="detail-price">${product.price.toFixed(2)} <span>per item</span></p>
+          <p className="detail-price">₱{product.price.toFixed(2)} <span>per item</span></p>
           <p>{product.description}</p>
           <dl>
             <div><dt>Specification</dt><dd>{product.specification}</dd></div>
