@@ -1,0 +1,15 @@
+.site-header {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #d9d2c4;
+}
+
+.brand {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+main {
+  width: min(1100px, calc(100% - 3rem));
+  margin: 3rem auto;
+}
