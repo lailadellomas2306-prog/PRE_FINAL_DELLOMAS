@@ -13,3 +13,16 @@ main {
   width: min(1100px, calc(100% - 3rem));
   margin: 3rem auto;
 }
+
+.cart-summary {
+  position: sticky;
+  bottom: 1rem;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid #d9d2c4;
+  background: #fffdf8;
+}

@@ -8,6 +8,10 @@ function Home({ products, setProducts, onAddProduct }) {
   const visibleProducts = activeCategory === 'All'
     ? products
     : products.filter((product) => product.category === activeCategory)
+  const cartSummary = products.reduce((summary, product) => ({
+    itemCount: summary.itemCount + (product.inCart ?? 0),
+    total: summary.total + product.price * (product.inCart ?? 0),
+  }), { itemCount: 0, total: 0 })
 
   function changeCartQuantity(productId, change) {
     setProducts((currentProducts) => currentProducts.map((product) => {
@@ -46,6 +50,10 @@ function Home({ products, setProducts, onAddProduct }) {
         ))}
       </section>
       <AddProductForm onAdd={onAddProduct} />
+      <aside className="cart-summary" aria-live="polite" aria-label="Cart summary">
+        <span>{cartSummary.itemCount} {cartSummary.itemCount === 1 ? 'item' : 'items'} in cart</span>
+        <span>Cart total <strong>${cartSummary.total.toFixed(2)}</strong></span>
+      </aside>
     </main>
   )
 }
