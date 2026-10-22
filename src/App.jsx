@@ -6,7 +6,7 @@ import { initialProducts } from './data/products.js'
 import './App.css'
 
 function App() {
-  const [products] = useState(initialProducts)
+  const [products, setProducts] = useState(initialProducts)
 
   return (
     <BrowserRouter>
@@ -14,7 +14,7 @@ function App() {
         <Link to="/" className="brand">Pantry Manager</Link>
       </header>
       <Routes>
-        <Route path="/" element={<Home products={products} />} />
+        <Route path="/" element={<Home products={products} setProducts={setProducts} />} />
         <Route path="/product/:id" element={<ProductDetail />} />
       </Routes>
     </BrowserRouter>
