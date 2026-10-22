@@ -1,7 +1,8 @@
 import { useState } from 'react'
+import AddProductForm from '../components/AddProductForm.jsx'
 import ProductCard from '../components/ProductCard.jsx'
 
-function Home({ products, setProducts }) {
+function Home({ products, setProducts, onAddProduct }) {
   const [activeCategory, setActiveCategory] = useState('All')
   const categories = ['All', ...new Set(products.map((product) => product.category))]
   const visibleProducts = activeCategory === 'All'
@@ -44,6 +45,7 @@ function Home({ products, setProducts }) {
           <ProductCard key={product.id} product={product} onCartChange={changeCartQuantity} />
         ))}
       </section>
+      <AddProductForm onAdd={onAddProduct} />
     </main>
   )
 }
