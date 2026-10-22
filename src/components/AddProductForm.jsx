@@ -62,6 +62,7 @@ function AddProductForm({ onAdd }) {
           <select name="category" value={form.category} onChange={updateField} required>
             <option value="" disabled>Select a category</option>
             <option>Produce</option>
+            <option>Seafood</option>
             <option>Dairy</option>
             <option>Bakery</option>
             <option>Pantry</option>
